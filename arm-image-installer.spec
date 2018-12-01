@@ -3,7 +3,7 @@
 # git archive --format=tar --prefix=%{name}-%{version}/ %{version} | xz > ~/%{name}-%{version}.tar.xz
 
 Name:		arm-image-installer
-Version:	2.8
+Version:	2.9
 Release:	1%{?dist}
 Summary:	Writes binary image files to any specified block device
 License:	GPLv2+
@@ -55,6 +55,9 @@ ln -s /usr/bin/arm-image-installer %{buildroot}%{_bindir}/fedora-arm-image-insta
 %{_datadir}/arm-image-installer/
 
 %changelog
+* Sat Dec 01 2018 Paul Whalen <pwhalen@fedoraproject.org> - 2.8-2
+- Update to 2.9
+
 * Tue Oct 09 2018 Paul Whalen <pwhalen@redhat.com> - 2.8-1
 - Update to 2.8
 
