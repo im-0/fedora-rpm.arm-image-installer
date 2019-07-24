@@ -4,7 +4,7 @@
 
 Name:		arm-image-installer
 Version:	2.13
-Release:	1%{?dist}
+Release:	2%{?dist}
 Summary:	Writes binary image files to any specified block device
 License:	GPLv2+
 Url:		https://pagure.io/arm-image-installer
@@ -55,6 +55,9 @@ ln -s /usr/bin/arm-image-installer %{buildroot}%{_bindir}/fedora-arm-image-insta
 %{_datadir}/arm-image-installer/
 
 %changelog
+* Wed Jul 24 2019 Fedora Release Engineering <releng@fedoraproject.org> - 2.13-2
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_31_Mass_Rebuild
+
 * Wed Jun 26 2019 Paul Whalen <pwhalen@fedoraproject.org> - 2.13-1
 - Update to 2.13
 - Fix BZ#1655329, BZ#1692903
