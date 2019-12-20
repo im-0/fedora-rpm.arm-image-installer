@@ -3,7 +3,7 @@
 # git archive --format=tar --prefix=%{name}-%{version}/ %{version} | xz > ~/%{name}-%{version}.tar.xz
 
 Name:		arm-image-installer
-Version:	2.14
+Version:	2.15
 Release:	1%{?dist}
 Summary:	Writes binary image files to any specified block device
 License:	GPLv2+
@@ -42,7 +42,6 @@ install -pm 644 boards.d/* %{buildroot}%{_datadir}/arm-image-installer/boards.d/
 install -d %{buildroot}%{_bindir}
 install -pm 0755 update-uboot %{buildroot}%{_bindir}/
 install -pm 0755 arm-image-installer %{buildroot}%{_bindir}/
-install -pm 0755 rpi-uboot-update %{buildroot}%{_bindir}/rpi-uboot-update
 ln -s /usr/bin/arm-image-installer %{buildroot}%{_bindir}/fedora-arm-image-installer
 
 %files
@@ -51,10 +50,12 @@ ln -s /usr/bin/arm-image-installer %{buildroot}%{_bindir}/fedora-arm-image-insta
 %{_bindir}/arm-image-installer
 %{_bindir}/fedora-arm-image-installer
 %{_bindir}/update-uboot
-%{_bindir}/rpi-uboot-update
 %{_datadir}/arm-image-installer/
 
 %changelog
+* Fri Dec 20 2019 Paul Whalen <pwhalen@fedoraproject.org> - 2.15-1
+- Update to 2.15
+
 * Thu Dec 19 2019 Paul Whalen <pwhalen@fedoraproject.org> - 2.14-1
 - Update to 2.14
 
