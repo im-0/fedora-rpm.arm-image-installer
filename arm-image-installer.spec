@@ -3,8 +3,8 @@
 # git archive --format=tar --prefix=%{name}-%{version}/ %{version} | xz > ~/%{name}-%{version}.tar.xz
 
 Name:		arm-image-installer
-Version:	2.17
-Release:	2%{?dist}
+Version:	2.18
+Release:	1%{?dist}
 Summary:	Writes binary image files to any specified block device
 License:	GPLv2+
 Url:		https://pagure.io/arm-image-installer
@@ -55,6 +55,9 @@ ln -s /usr/bin/arm-image-installer %{buildroot}%{_bindir}/fedora-arm-image-insta
 %{_datadir}/arm-image-installer/
 
 %changelog
+* Wed Aug 12 2020 Paul Whalen <pwhalen@fedoraproject.org> - 2.18-1
+- Update to 2.18
+
 * Mon Jul 27 2020 Fedora Release Engineering <releng@fedoraproject.org> - 2.17-2
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_33_Mass_Rebuild
 
