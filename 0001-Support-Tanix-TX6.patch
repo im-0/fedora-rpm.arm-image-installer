@@ -1,0 +1,34 @@
+From 4bfd9e95472f8bc4ddf9273088540aa56a14c2e6 Mon Sep 17 00:00:00 2001
+From: Ivan Mironov <mironov.ivan@gmail.com>
+Date: Sun, 23 Aug 2020 17:52:34 +0500
+Subject: [PATCH] Support Tanix TX6
+
+---
+ SUPPORTED-BOARDS   | 1 +
+ boards.d/tanix_tx6 | 1 +
+ 2 files changed, 2 insertions(+)
+ create mode 120000 boards.d/tanix_tx6
+
+diff --git a/SUPPORTED-BOARDS b/SUPPORTED-BOARDS
+index c6780e8b8b35..2025c6849902 100644
+--- a/SUPPORTED-BOARDS
++++ b/SUPPORTED-BOARDS
+@@ -17,6 +17,7 @@ AllWinner-A64 Devices:
+ a64-olinuxino amarula_a64_relic bananapi_m2_plus_h5 bananapi_m64 libretech_all_h3_cc_h5 nanopi_a64 
+ nanopi_neo2 nanopi_neo_plus2 orangepi_lite2 orangepi_one_plus orangepi_pc2 orangepi_prime orangepi_win 
+ orangepi_zero_plus orangepi_zero_plus2 pine64-lts pine64_plus pine_h64 pinebook sopine_baseboard 
++tanix_tx6 
+ 
+ MX6 Devices:
+ cm_fx6 liteboard marsboard mx6cuboxi novena riotboard udoo udoo_neo usbarmory wandboard warp warp7 
+diff --git a/boards.d/tanix_tx6 b/boards.d/tanix_tx6
+new file mode 120000
+index 000000000000..44bea259b64a
+--- /dev/null
++++ b/boards.d/tanix_tx6
+@@ -0,0 +1 @@
++../socs.d/AllWinner
+\ No newline at end of file
+-- 
+2.26.2
+

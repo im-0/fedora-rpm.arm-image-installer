@@ -4,7 +4,7 @@
 
 Name:		arm-image-installer
 Version:	2.18
-Release:	1%{?dist}
+Release:	1.im0%{?dist}
 Summary:	Writes binary image files to any specified block device
 License:	GPLv2+
 Url:		https://pagure.io/arm-image-installer
@@ -12,12 +12,16 @@ Url:		https://pagure.io/arm-image-installer
 BuildArch:	noarch
 Source0:	%{name}-%{version}.tar.xz
 
+Patch1:		0001-Support-Tanix-TX6.patch
+
 Obsoletes:	fedora-arm-installer < 2.5
 Provides:	fedora-arm-installer < 2.5
 Requires:	e2fsprogs
 Requires:	parted
 Requires:	sudo
 Requires:	util-linux
+
+BuildRequires:	git-core
 
 
 %description
@@ -27,7 +31,7 @@ destination block device should then be selected for final installation.
 
 
 %prep
-%autosetup
+%autosetup -S git_am
 
 %build
 echo "skipping..."
@@ -55,6 +59,9 @@ ln -s /usr/bin/arm-image-installer %{buildroot}%{_bindir}/fedora-arm-image-insta
 %{_datadir}/arm-image-installer/
 
 %changelog
+* Sun Aug 23 2020 Ivan Mironov <mironov.ivan@gmail.com> - 2.18-1.im0
+- Support Tanix TX6
+
 * Wed Aug 12 2020 Paul Whalen <pwhalen@fedoraproject.org> - 2.18-1
 - Update to 2.18
 
