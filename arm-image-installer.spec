@@ -4,7 +4,7 @@
 
 Name:		arm-image-installer
 Version:	2.18
-Release:	1%{?dist}
+Release:	2%{?dist}
 Summary:	Writes binary image files to any specified block device
 License:	GPLv2+
 Url:		https://pagure.io/arm-image-installer
@@ -14,6 +14,7 @@ Source0:	%{name}-%{version}.tar.xz
 
 Obsoletes:	fedora-arm-installer < 2.5
 Provides:	fedora-arm-installer < 2.5
+Requires:	btrfs-progs
 Requires:	e2fsprogs
 Requires:	parted
 Requires:	sudo
@@ -55,6 +56,9 @@ ln -s /usr/bin/arm-image-installer %{buildroot}%{_bindir}/fedora-arm-image-insta
 %{_datadir}/arm-image-installer/
 
 %changelog
+* Fri Aug 28 2020 Neal Gompa <ngompa13@gmail.com> - 2.18-2
+- Add missing dependency for btrfs-progs
+
 * Wed Aug 12 2020 Paul Whalen <pwhalen@fedoraproject.org> - 2.18-1
 - Update to 2.18
 
